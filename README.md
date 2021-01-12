@@ -6,7 +6,7 @@ It contains:
  - A replica of my house created with the **Building Editor** tool in Gazebo using the following floor plan.
  ![](./assets/vinhome_floorplan.jpg)
 
- - A Two Wheel Robot model with connected joints created with the **Model Editor** tool in Gazebo. 
+ - A two wheel robot model and a four wheel robot model, both with connected joints, created with the **Model Editor** tool in Gazebo. 
  - A world with two instances of the robot, my home model, some models from imported from the **Gazebo online library**, and a C++ **World Plugin** that display "Welcome to Vin's World!" message as soon as you launch the Gazebo world file.
  ![](./assets/simulator.jpg)
 
@@ -30,14 +30,15 @@ It contains:
     $ cd build-my-world
     ```
 
-3. Enter in build directory and compile the Welcome World plugin.
+3. Create the build directory and compile the Welcome World plugin.
 
    ```sh
+   $ mkdir build
    $ cd build/
    $ cmake ../
-   $ make # You might get errors if your system is not up to date!
-   $ cd ../
+   $ make # You might get errors if your system is not up to date!   
    $ export GAZEBO_PLUGIN_PATH=${GAZEBO_PLUGIN_PATH}:${PWD}
+   $ cd ../
    ```
    
 
